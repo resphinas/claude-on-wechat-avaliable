@@ -6,7 +6,6 @@
 原项目网址： https://github.com/zhayujie/chatgpt-on-wechat
 本项目将 openai 的 chatgpt 改为了 claude 
 
-![Uploading 1690949494703.png…]()
 
 
 ## 准备
