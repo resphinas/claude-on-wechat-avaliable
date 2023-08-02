@@ -1,5 +1,5 @@
 ![1690949620661](https://github.com/resphinas/claude-on-wechat-master/assets/69687075/7a0bfcae-6d77-4b54-9203-5350dfdf3a03)# 简介
-
+[![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README_EN.md)
 
 > claude近期以强大的对话和信息整合能力风靡全网，可以写代码、改论文、讲故事，几乎无所不能，这让人不禁有个大胆的想法，能否用他的对话模型把我们的微信打造成一个智能机器人，可以在与好友对话中给出意想不到的回应，而且再也不用担心女朋友影响我们 ~~打游戏~~ 工作了。
 
