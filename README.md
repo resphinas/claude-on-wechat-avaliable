@@ -44,17 +44,7 @@ pip3 install -r requirements-optional.txt
 
 > 如果某项依赖安装失败请注释掉对应的行再继续。
 
-其中`tiktoken`要求`python`版本在3.8以上，它用于精确计算会话使用的tokens数量，强烈建议安装。
 
-
-使用`google`或`baidu`语音识别需安装`ffmpeg`，
-
-默认的`openai`语音识别不需要安装`ffmpeg`。
-
-参考[#415](https://github.com/zhayujie/chatgpt-on-wechat/issues/415)
-
-使用`azure`语音功能需安装依赖，并参考[文档](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/quickstarts/setup-platform?pivots=programming-language-python&tabs=linux%2Cubuntu%2Cdotnet%2Cjre%2Cmaven%2Cnodejs%2Cmac%2Cpypi)的环境要求。
-:
 
 
 
@@ -67,15 +57,14 @@ pip3 install -r requirements-optional.txt
 
 ```bash
 # config.json文件内容示例
-改动后 只需填写
-   "org_uuid":"",
-  "con_uuid":"",
-  "cookie": "", 
+改动后 只需填充
+   org_uuid
+  con_uuid
+  cookie
   group_name_white_list
-  "single_chat_reply_prefix": "[bot] ",
-  "group_chat_prefix": [
-    "@bot"
-  ],
+  single_chat_reply_prefix
+  group_chat_prefix
+  
 这几个参数即可
 
 ```
