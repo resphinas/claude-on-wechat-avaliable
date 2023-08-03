@@ -98,7 +98,7 @@ def main(org_uuid,con_uuid,cookie):
       try_time_current = 0
 
       #最大重试次数
-      try_time_max = 5
+      try_time_max = 15
 
       while True:
 
