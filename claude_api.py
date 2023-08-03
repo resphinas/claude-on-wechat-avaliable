@@ -123,9 +123,9 @@ def main(org_uuid,con_uuid,cookie):
 
 
 if __name__ == '__main__':
-    org_uuid= "3dd1bb7a-0f77-4f74-8261-c54ac5990c86"
-    con_uuid= "ecc769bc-427b-466b-843c-1b7bf9b44295"
-    cookie = "sessionKey=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; intercom-device-id-lupk8zyo=b37192f8-c3a5-408d-8525-60ad8c2cc57c; intercom-session-lupk8zyo=dEZVQTB1a20zQU4wS3YyMmlwV1gyN1RXVE9pcmVOWUhHOWp6Y3p3Y0k1YWtGM01Wc0N6ZW1iOUM1UFg3c1N3dC0tdjJyemxyQlFhOTNoZk9BRjNjaFhnUT09--bf0e6b06b07e08f83dbbd100632107f4f1347279; __cf_bm=zGAhp9yifa_bhBcwLqaug2ds.LTLiScAn1X2FjXnb5I-1690833261-0-AaCi1Jk/9x5rE3846W+OJYayvb6bvo0xvHo6/L7D08JyitQWJYGruxGV+gF+yPe77UO86Js5iEjPdp1LInA3CMQ="
+    org_uuid= ###
+    con_uuid= ###
+    cookie = ###
     # claude = Claude(org_uuid, con_uuid,cookie)
     # history = claude.chat_conversation_history()
     # print(history)
