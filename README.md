@@ -60,11 +60,11 @@ pip3 install -r requirements-optional.txt
 # config.json文件内容示例
 改动后 只需填充
    org_uuid
-  con_uuid
-  cookie
-  group_name_white_list
-  single_chat_reply_prefix
-  group_chat_prefix
+  con_uuid 
+  cookie 
+  group_name_white_list 微信群白名单
+  single_chat_reply_prefix  私聊触发前缀
+  group_chat_prefix  群聊触发前缀
   
 这几个参数即可
 
