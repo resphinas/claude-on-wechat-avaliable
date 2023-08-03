@@ -92,9 +92,9 @@ pip3 install -r requirements-optional.txt
    claude_api.py 中填写自己的参数信息并且能够正常运行
    文件中部分代码如下
 if __name__ == '__main__':
-    org_uuid= ####
-    con_uuid= ####
-    cookie = ####
+    org_uuid= 此处填写自己的uuid
+    con_uuid= 此处填写自己的uuid
+    cookie =  此处填写自己的cookie
     main(org_uuid,con_uuid,cookie)
 
 确认运行正常且能接收到claude信息之后继续↓↓↓
