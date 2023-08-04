@@ -59,10 +59,10 @@ pip3 install -r requirements-optional.txt
 ```bash
 # config.json文件内容示例
 改动后 只需填充
-  org_uuid
-  con_uuid 
-  cookie 
-  group_name_white_list 微信群白名单
+  org_uuid  组织uuid
+  con_uuid  对话uuid
+  cookie  claude聊天时的cookie
+  group_name_white_list 微信群白名单列表
   single_chat_reply_prefix  私聊触发前缀
   group_chat_prefix  群聊触发前缀
   
