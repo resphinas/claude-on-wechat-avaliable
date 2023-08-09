@@ -124,7 +124,7 @@ nohup python3 app.py & tail -f nohup.out          # 在后台运行程序并通�
 
 > **特殊指令：** 用户向机器人发送 **#reset** 即可清空该用户的上下文记忆。
 
-###3.重要说明
+### 3.重要说明
 使用中途如需更换claude conversation_uuid等，需要手动将 claude_flag.txt里的数字改为0
 
 
