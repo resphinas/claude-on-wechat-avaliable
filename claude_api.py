@@ -35,7 +35,7 @@ class Claude:
             'Cache-Control': 'no-cache',
             'Connection': 'keep-alive',
             'Content-Type': 'application/json',
-            'Cookie': 'sessionKey=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; intercom-device-id-lupk8zyo=b37192f8-c3a5-408d-8525-60ad8c2cc57c; cf_clearance=cnrHoXpKe8oYaSb_ueEf741KfWzkZQs71BzzC3J9Etk-1692263009-0-1-d021c7f2.9cfa13a2.87209812-0.2.1692263009; __cf_bm=eLd1xug7A7Ox9SUsEVY8eWycHG8OMxwQKA9Urv5YUsQ-1692263116-0-AcZtkH3mqrYMWnp7r1VmbFPE4bFGh3+lZTLmpjUnP4ZDJWfYg0nvwyWJacLC4tgTtUKYbOJ5Q0uQpEf8vSHa+5M=; intercom-session-lupk8zyo=c2VScWlab3ltTTFHQjFqWnZ5SjdXc2JBYzNCbEhwVi92YTdmVmp2MnZ6QjEwZFpVeGhrQmR6a3hzTmJjaWhiby0tSTNnZWZoWmZyL0g5bEM1cGRTS1JTUT09--1d01b77dbfc766a1a4eed1ace3eaaf473d8edfc6; __cf_bm=mQCiAsnYkW8FOZvzF4kEaJqq2CC1adHnvpoV2xg6Igs-1692263243-0-AYtt7986i3OTM2J27ldMZU/IjjUuGy3Q7Cl1oEJ19ySeD14dfJQd4Zkbw0hHFgbt75fhcgzAJ4CgvFRQ2i37AxI=',
+            'Cookie': self.cookie,
             'Origin': 'https://claude.ai',
             'Pragma': 'no-cache',
             'Referer': 'https://claude.ai/chat/c462f2ba-e0c6-4344-b790-649d837908b1',
