@@ -131,8 +131,8 @@ def main(org_uuid,con_uuid,cookie):
 
 
 if __name__ == '__main__':
-
-    #org_uuid= ###测试时取消注释
-    #con_uuid= ###
-    #cookie = ###
+    pass
+    # org_uuid= ###测试时取消注释
+    # con_uuid= ###
+    # cookie = ###
     # claude = Claude(org_uuid, con_uuid,cookie)
