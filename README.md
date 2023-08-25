@@ -10,7 +10,9 @@
 
 
 
-## 由于官方接入cloudware反爬，本项目已失效，不再更新！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+## 项目更新 curl_cffi 绕过指纹识别  可继续使用！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+只需要 在这个文件里指定自己的代理即可 ![image](https://github.com/resphinas/claude-on-wechat/assets/69687075/35eaa68f-4885-442a-b40d-80205cb98f43)
+
 
 ### 1. 提取claude官方参数
 https://blog.csdn.net/resphina/article/details/132034037?spm=1001.2014.3001.5501
