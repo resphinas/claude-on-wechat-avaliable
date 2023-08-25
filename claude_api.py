@@ -1,61 +1,56 @@
-from config import conf, load_config
-import requests
 import json
-import re
 import time
-import execjs
+from curl_cffi import requests
 
+# 定义代理服务器的地址
+proxy_url = "http://127.0.0.1:33210"
+
+# 构建代理字典，键是协议（http、https等），值是代理服务器地址
+proxies = {
+    "http": proxy_url,
+    "https": proxy_url
+}
 class Claude:
     def __init__(self,org_uuid,con_uuid,cookie):
         self.org_uuid = org_uuid
         self.con_uuid = con_uuid
         self.cookie = cookie
-        self.ctx = execjs.compile(open('decode.js',encoding='utf-8').read())
 
     def send_message(self, query):
-        sentry_trace = self.ctx.call('Sentry_Trace')
-        traceid = sentry_trace.split("-")[0]
+        # sentry_trace = self.ctx.call('Sentry_Trace')
+        # traceid = sentry_trace.split("-")[0]
         url = "https://claude.ai/api/append_message"
         payload = json.dumps({
             "completion": {
-                "prompt": query,
-                "timezone": "Asia/Singapore",
-                "model": "claude-2",
+                "prompt": f"{query}",
+                "timezone": "Asia/Kolkata",
+                "model": "claude-2"
             },
-            "organization_uuid": self.org_uuid,
-            "conversation_uuid": self.con_uuid,
-            "text": query,
+            "organization_uuid": f"{self.org_uuid}",
+            "conversation_uuid": f"{self.con_uuid}",
+            "text": f"{query}",
             "attachments": []
         })
-
-       
         headers = {
+            'User-Agent':
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
             'Accept': 'text/event-stream, text/event-stream',
-            'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6',
-            'Cache-Control': 'no-cache',
-            'Connection': 'keep-alive',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Referer': 'https://claude.ai/chats',
             'Content-Type': 'application/json',
-            'Cookie': self.cookie,
             'Origin': 'https://claude.ai',
-            'Pragma': 'no-cache',
-            'Referer': 'https://claude.ai/chat/c462f2ba-e0c6-4344-b790-649d837908b1',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Cookie': f'{self.cookie}',
             'Sec-Fetch-Dest': 'empty',
             'Sec-Fetch-Mode': 'cors',
             'Sec-Fetch-Site': 'same-origin',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.1901.203',
-            'baggage': f'sentry-environment=production,sentry-release=86abdb3b7746a7db1186e7f95122841d382471e3,sentry-public_key=58e9b9d0fc244061a1b54fe288b0e483,sentry-trace_id={traceid}',
-            'sec-ch-ua': '"Not/A)Brand";v="99", "Microsoft Edge";v="115", "Chromium";v="115"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Windows"',
-            'sentry-trace': sentry_trace
+            'TE': 'trailers'
         }
-        print(headers)
-        print("here")
+
         try:
-            s = requests.session()
-            response = s.post(url, headers=headers, data=payload,stream = True)
-            # response = requests.request("POST", url, headers=headers, data=payload,stream = True)
-            # print(response.headers,"\n",response.cookies,"\n",response.text)
+            response = requests.post(url, headers=headers, data=payload,impersonate="chrome110",proxies=proxies,timeout=400)
+            print(response.text)
         except Exception as error:
             print(error)
             return False
@@ -80,7 +75,7 @@ class Claude:
             'Cookie': f'{self.cookie}'
         }
 
-        response = requests.request("GET", url, headers=headers)
+        response = requests.get( url, headers=headers, proxies =proxies,impersonate="chrome110")
         response.encoding = 'utf-8'
         return response.json()
 
@@ -118,9 +113,6 @@ def main(org_uuid,con_uuid,cookie):
         while True:
 
             history = claude.chat_conversation_history()
-            # print(history)
-            # print(history)
-
             answer,cache = get_last_answer(history, cache)
             print("cache :" ,cache)
             if answer == None or answer == query:
@@ -137,11 +129,10 @@ def main(org_uuid,con_uuid,cookie):
         print("robot: ", answer)
 
 
+
 if __name__ == '__main__':
-    org_uuid= ###
-    con_uuid= ###
-    cookie = ###
+
+    #org_uuid= ###测试时取消注释
+    #con_uuid= ###
+    #cookie = ###
     # claude = Claude(org_uuid, con_uuid,cookie)
-    # history = claude.chat_conversation_history()
-    # print(history)
-    main(org_uuid,con_uuid,cookie)
