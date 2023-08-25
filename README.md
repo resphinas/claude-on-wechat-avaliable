@@ -4,26 +4,7 @@
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README_EN.md)
 
 > claude近期以强大的对话和信息整合能力风靡全网，可以写代码、改论文、讲故事，几乎无所不能，这让人不禁有个大胆的想法，能否用他的对话模型把我们的微信打造成一个智能机器人，可以在与好友对话中给出意想不到的回应，而且再也不用担心女朋友影响我们 ~~打游戏~~ 工作了。
-由于官方接入cloudware反爬，本项目已失效，不再更新！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#由于官方接入cloudware反爬，本项目已失效，不再更新！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 原项目网址： https://github.com/zhayujie/chatgpt-on-wechat
 本项目将 openai 的 chatgpt 改为了 claude 
 
