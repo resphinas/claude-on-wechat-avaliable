@@ -13,9 +13,7 @@
   "group_chat_prefix": [
     "@bot"
   ],
-  "group_name_white_list": [
-    ""
-  ],
+  "group_name_white_list":  ["ALL_GROUP"],
   "group_chat_in_one_session": [
     ""
   ],
