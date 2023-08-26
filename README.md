@@ -11,6 +11,7 @@
 
 
 ## 项目更新 curl_cffi 绕过指纹识别  可继续使用！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+温馨提示： 登录的微信号需要至少一张银行卡绑定才能使用itchat组件库。
 只需要 在这个文件里指定自己的代理即可 ![image](https://github.com/resphinas/claude-on-wechat/assets/69687075/35eaa68f-4885-442a-b40d-80205cb98f43)
 
 
