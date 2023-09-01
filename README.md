@@ -2,7 +2,7 @@
 
 
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README_EN.md)
-## 本项目为 claude 接口阉割迷你版，完整项目以pr给原项目，请移至https://github.com/zhayujie/chatgpt-on-wechat/releases，本项目不在更新，作为私人历史项目封存。
+## 本项目为 claude 接口阉割迷你版，完整项目以pr给原项目，请移至https://github.com/zhayujie/chatgpt-on-wechat/releases   本项目不在更新，作为私人历史项目封存。
 
 > claude近期以强大的对话和信息整合能力风靡全网，可以写代码、改论文、讲故事，几乎无所不能，这让人不禁有个大胆的想法，能否用他的对话模型把我们的微信打造成一个智能机器人，可以在与好友对话中给出意想不到的回应，而且再也不用担心女朋友影响我们 ~~打游戏~~ 工作了。
 
